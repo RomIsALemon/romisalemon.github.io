@@ -31,7 +31,7 @@ function sendtopage(name) {
             window.open("SaveState.html", "_self");
             break;
         case "FishEatGame":
-            window.open("AlwaysASmallerFish.html", "_blank")
+            window.open("AlwaysASmallerFish.html", "_self")
             break;
         case "Icarus":
             window.open("IcarusCrispyFeathers.html", "_self")
