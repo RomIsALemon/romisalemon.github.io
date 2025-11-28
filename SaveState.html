@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save_State()</title>
+    <link rel="icon" type="image/x-icon" href="LemonLogo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+      <div class="sliding-bg"></div>
+      <div id="navbar">
+        <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
+      </div>
+      <div class="project">
+        <img src="SaveStateLogo.png" id="savestatelogo">
+        <div id="tools">
+        <h3>Tools Used:</h3>
+        <ul>
+            <li class="expItem" id="expEngine">Unreal</li>
+            <li class="expItem" id="expCode">Blueprint Scripting</li>
+            <li class="expItem" id="expOther">Aseprite</li>
+        </ul>
+        </div>
+        <div id="projectinfo">
+            <ul id="infolist">
+                <li class="projinfo"><b>Role</b>: Gameplay Programmer</li>
+                <li class="projinfo"><b>Team Size</b>: 1</li>
+                <li class="projinfo"><b>Development Time</b>: 4 Months</li>
+            </ul>
+        </div>
+        <p>This was my first complete project in Unreal Engine 5, made for my Game Engine II term project. My idea was simple, but the potential was exciting: A Portal-inspired puzzle platformer,
+            but instead of shooting portals, you save your position at any time, and load it, in the same way an emulator uses save states.
+        </p>
+        <h1>The Save State Mechanic</h1>
+        <p>When the player presses R, the character's current position, rotation and velocity are saved into the GameMode blueprint, which are then set back to
+            the player pawn when the player presses F. This function is useful for going back to a previous spot in case you fall off a ledge, as well as
+            reaching an area you wouldn't be able to get to quick enough by moving normally.
+        </p>
+        <img id="trpg" class="projectimg" src="SaveStateGif3.gif">
+        <p>In addition, an interesting effect this feature has comes from its velocity storage. Once the velocity is loaded and set to the player pawn, it will
+            be as if they had just saved, and their movement continues as normal. However, if the player saves while completely still and loads their state while they have
+            momentum...
+        </p>
+        <img id="trpg" class="projectimg" src="SaveStateGif4.gif">
+        <p>The momentum from before you loaded the state gets used instead! Although unintended, this bug was turned into a feature! 
+            When taking these uses of save states into account, their applications in puzzles opened up a lot more.</p>
+        <img id="trpg" class="projectimg" src="SaveStateGif1.gif">
+        <p>2 levels were created, each having 5 rooms with puzzles to solve. <a href="https://romisalemon.itch.io/save_state">You can try them out for yourself here!</a></p>
+      </div>
+    <div id="screensaver">
+      <img src="LemonGif.gif" id="screensaverImg" />
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1d10897a33.js" crossorigin="anonymous"></script>
+</body>
+</html>

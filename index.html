@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Obadia</title>
+    <link rel="icon" type="image/x-icon" href="LemonLogo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sliding-bg"></div>
+      <h1 class="headertext">Michael Obadia</h1>
+      <h2 class="headertext">Game Developer and Programmer</h2>
+      <div id="mainDesc">
+        <img id="avatar" src="PortfolioAvatar2.png" />
+        <p>Hello! I'm Michael, a game programmer that loves turning ideas into solid player mechanics. Regardless of engine or genre,
+          I really enjoy prototyping and making small-scale projects to learn how certain gameplay systems work and implement them in creative ways. 
+          I am adaptable, a team player and always excited to try something new!
+        </p>
+      </div>
+      <div id="navbar">
+        <a
+          href="https://www.linkedin.com/in/michael-obadia02um/"
+          class="fa fa-linkedin-square"
+          style="font-size: 36px"
+          target="_blank"
+          title="LinkedIn"
+        ></a>
+        <a
+          href="MichaelObadiaCV.pdf"
+          class="fa-regular fa-file"
+          style="font-size: 36px"
+          target="_blank"
+          title="My CV"
+        ></a>
+        <a
+          href="https://romisalemon.itch.io"
+          class="fa-brands fa-itch-io"
+          style="font-size: 36px"
+          target="_blank"
+          title="Itch.io"
+        ></a>
+        <a
+          href="https://github.com/RomIsALemon"
+          class="fa-brands fa-github"
+          style="font-size: 36px"
+          target="_blank"
+          title="Github"
+        ></a>
+      </div>
+      <div class="expDiv">
+        <h1>My Projects</h1>
+      </div>
+      <div id="gameDiv">
+        <div class="game" onclick="sendtopage('ComingSoon')">
+          <img
+            src="ComingSoon.png"
+            width="250px"
+            height="250px"
+            class="gameImg"
+          />
+          <h4>In Progress Projects</h4>
+          <p class="shortDesc">
+            Here are some projects I am currently working on!
+          </p>
+        </div>
+        <div class="game" onclick="sendtopage('SaveState')">
+          <img
+            src="SaveStatePreview1.png"
+            width="250px"
+            height="250px"
+            id="SaveState"
+            class="gameImg"
+          />
+          <h4>Save_State()</h4>
+          <p class="shortDesc">
+            My first project in Unreal Engine. A first person puzzle platformer
+            where you can save and load your position at will.
+          </p>
+        </div>
+        <div class="game" onclick="sendtopage('FishEatGame')">
+          <img
+            src="FishEatGamePic.png"
+            width="250px"
+            height="250px"
+            id="FishEatGame"
+            class="gameImg"
+          />
+          <h4>Always a Smaller Fish</h4>
+          <p class="shortDesc">
+            My solo Godot project where you can eat smaller fish in order to grow and eat bigger fish, while gaining new abilities and toppling the hierarchy.
+          </p>
+        </div>
+        <div class="game" onclick="sendtopage('Icarus')">
+          <img src="IcarusCrispyFeathersPic.png" width="250px" height="250px" class="gameImg" id="Icarus"/>
+          <h4>Icarus: Crispy Feathers</h4>
+          <p class="shortDesc">My first team project, made in Unity. A 3D Platformer collectathon
+            where Icarus must collect his feathers after flying too close to the sun.
+          </p>
+        </div>
+        
+      </div>
+      <div class="expDiv">
+        <h1>Technical Experience</h1>
+        <div id="legend">
+          <p style="color: cyan">Coding</p>
+          <p style="color: orange">Engine</p>
+          <p style="color: greenyellow">Other</p>
+        </div>
+        <div id="exp">
+          <ul>
+            <li class="expItem" id="expCode">C++</li>
+            <li class="expItem" id="expEngine">Unreal Engine</li>
+            <li class="expItem" id="expCode">Blueprint Scripting</li>
+            <li class="expItem" id="expOther">Perforce</li>
+            <li class="expItem" id="expCode">C#</li>
+            <li class="expItem" id="expEngine">Unity</li>
+            <li class="expItem" id="expOther">Git</li>
+            <li class="expItem" id="expCode">HTML</li>
+            <li class="expItem" id="expCode">CSS</li>
+            <li class="expItem" id="expCode">JavaScript</li>
+            <li class="expItem" id="expCode">Java</li>
+            <li class="expItem" id="expCode">GDScript</li>
+            <li class="expItem" id="expEngine">Godot</li>
+            <li class="expItem" id="expOther">Maya</li>
+            <li class="expItem" id="expOther">Aseprite</li>
+          </ul>
+        </div>
+      </div>
+      <div class="expDiv">
+        <h1>Education</h1>
+        <div id="eduDiv">
+          <div class="education">
+            <h2>College Lasalle</h2>
+            <p>DEC - Computer Science Technology - Video Game Programming</p>
+            <p>2023-Ongoing</p>
+          </div>
+          <div class="education">
+            <h2>Dawson College</h2>
+            <p>Computer Science Technology</p>
+            <p>2019-2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="screensaver">
+      <img src="LemonGif.gif" id="screensaverImg" />
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1d10897a33.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
