@@ -66,6 +66,8 @@ h4 {
   max-width: 400px;
   overflow: hidden;
   margin:auto;
+  max-height: 400px;
+  height:100%;
 }
 
 .headertext {
