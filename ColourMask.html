@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Mask</title>
+    <link rel="icon" type="image/x-icon" href="LemonLogo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+      <div class="sliding-bg"></div>
+      <div id="navbar">
+        <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
+      </div>
+      <div class="project">
+        <img src="colormaskscreenshot.png" id="savestatelogo">
+        <div id="tools">
+        <h3>Tools Used:</h3>
+        <ul>
+            <li class="expItem" id="expEngine">Unity</li>
+            <li class="expItem" id="expCode">C#</li>
+        </ul>
+        </div>
+        <div id="projectinfo">
+            <ul id="infolist">
+                <li class="projinfo"><b>Role</b>: Gameplay Programmer</li>
+                <li class="projinfo"><b>Team Size</b>: 7</li>
+                <li class="projinfo"><b>Development Time</b>: 48 Hours</li>
+            </ul>
+        </div>
+        <p>This game was developed in 48 hours during the Unity 2026 Global Game Jam in Montreal with the theme being "Mask". I was responsible for programming the main gameplay mechanic:
+            placing down blocks that enemies will collide with, mixing their respective colours, thus tying into our interpretation of the theme, being colour masking.
+        </p>
+        <h1>Block Placement</h1>
+        <p>Programming the logic for placing the colored blocks in the world is broken down into two main parts: Dragging the 2D block object from the UI to the world, 
+          and snapping the 3D block object to a plane before it becomes active. 
+        </p>
+        <br>
+        <p>Once a block on the UI has been selected, an instance of its 3D equivalent is created, and 
+          spawned on a plane. Its spawn location is determined by a raycast from the player's mouse placement to a plane where the blocks and enemies are located.</p>
+        <div id="codeblock"><code>public Vector3 BlockCoords()
+{
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    float distance;
+
+    if (groundPlane.Raycast(ray, out distance))
+    {
+        // Get the point on the plane where the ray intersects
+        Vector3 worldPosition = ray.GetPoint(distance);
+        return worldPosition;
+    }
+    else
+    {
+        return Vector3.zero;
+    }
+}</code>
+</div>
+        <h1>Colour Mixing System</h1>
+        <p>Enemies have variables for RGB values. When an enemy hits a block, their respective colors get merged, and when their color reaches RGB(255,255,255), it gets destroyed.</p>
+        <div id="codeblock"><code>public void MergeColor(Color newColor)
+{
+    // XOR-like merge for each channel
+    float r = (currentColor.r >= 0.92f && newColor.r == 1f) ? 0f : currentColor.r + newColor.r;
+    float g = (currentColor.g >= 0.92f && newColor.g == 1f) ? 0f : currentColor.g + newColor.g;
+    float b = (currentColor.b >= 0.92f && newColor.b == 1f) ? 0f : currentColor.b + newColor.b;
+
+    // Clamp to 1 in case both were 0.5 for example
+    currentColor = new Color(Mathf.Clamp01(r), Mathf.Clamp01(g), Mathf.Clamp01(b));
+
+    SetColor(currentColor);
+}</code></div>
+        <br>
+        <h1>What I Learned</h1>
+        <p>
+        This game jam helped me develop practical skills that are directly applicable to game programming 
+        and programming-adjacent roles such as QA and test automation. Working within a 48-hour deadline 
+        forced me to write gameplay systems that were clear, predictable, and easy to debug, rather than 
+        overly complex.
+        </p>
+        <br>
+        <p>
+        Implementing the block placement system gave me experience translating user input from UI space 
+        into reliable world-space interactions using raycasting and collision logic. I focused on making 
+        this system deterministic and consistent, which made it easier to test and adjust during rapid 
+        iteration.
+        </p>
+        <br>
+        <p>
+        The colour mixing mechanic reinforced the importance of data-driven design and edge case handling. 
+        By representing enemy states through RGB values and clamping results, I ensured consistent behaviour 
+        even in unexpected scenarios. This approach made the system easier to validate, balance, and reason 
+        about during playtesting.
+        </p>
+        <br>
+        <p>
+        Finally, collaborating in a multidisciplinary team strengthened my communication and adaptability. 
+        I regularly adjusted my code based on feedback from designers and artists, and learned how to 
+        prioritize stability and clarity under tight deadlines, which that are essential for internship 
+        roles focused on gameplay programming, QA, and autotesting.
+        </p>
+
+        <img id="trpg" class="projectimg" src="colormaskpreview.gif">
+        <p><a href="https://globalgamejam.org/games/2026/color-mask-5">You can try the game out for yourself here!</a></p>
+      </div>
+    <div id="screensaver">
+      <img src="LemonGif.gif" id="screensaverImg" />
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1d10897a33.js" crossorigin="anonymous"></script>
+</body>
+</html>

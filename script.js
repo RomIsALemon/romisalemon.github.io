@@ -35,5 +35,9 @@ function sendtopage(name) {
             break;
         case "Icarus":
             window.open("IcarusCrispyFeathers.html", "_self")
+            break;
+        case "ColourMask":
+            window.open("ColourMask.html", "_self")
+            break;
     }
 }

@@ -106,6 +106,10 @@ h4 {
   content: url("FishEatGameGif.gif");
 }
 
+.game:hover #ColourMask {
+  content: url("colormaskpreview.gif");
+}
+
 .game:hover {
   cursor: pointer;
 }
@@ -132,6 +136,7 @@ ul {
   justify-content: center;
   gap: 10px;
   padding: 0;
+  color:white;
 }
 
 .expItem {
@@ -286,3 +291,20 @@ p {
   font-size: 20px;
 }
 
+code {
+  color:white;
+  font-family:monospace;
+}
+
+#codeblock {
+  background-color: rgba(43, 43, 43, 0.829);
+  display:block;
+  border:1px solid white;
+  border-radius: 10px;
+  text-align:left;
+  padding:10px;
+  max-width: fit-content;
+  width:95%;
+  white-space: pre-wrap;
+  margin:auto;
+}
