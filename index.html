@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,40 +24,52 @@
       <h2 class="headertext">Game Developer and Programmer</h2>
       <div id="mainDesc">
         <img id="avatar" src="PortfolioAvatar2.png" />
-        <p>Hello! I'm Michael, a game programmer that loves turning ideas into solid player mechanics. Regardless of engine or genre,
-          I really enjoy prototyping and making small-scale projects to learn how certain gameplay systems work and implement them in creative ways. 
-          I am adaptable, a team player and always excited to try something new!
+        <div id="navbar">
+          <a
+            href="https://www.linkedin.com/in/michael-obadia02um/"
+            class="fa fa-linkedin-square"
+            style="font-size: 36px"
+            target="_blank"
+            title="LinkedIn"
+          ></a>
+          <a
+            href="MichaelObadiaCV.pdf"
+            class="fa-regular fa-file"
+            style="font-size: 36px"
+            target="_blank"
+            title="My CV"
+          ></a>
+          <a
+            href="https://romisalemon.itch.io"
+            class="fa-brands fa-itch-io"
+            style="font-size: 36px"
+            target="_blank"
+            title="Itch.io"
+          ></a>
+          <a
+            href="https://github.com/RomIsALemon"
+            class="fa-brands fa-github"
+            style="font-size: 36px"
+            target="_blank"
+            title="Github"
+          ></a>
+          <a
+            href="#contactme"
+            class="fa-solid fa-envelope"
+            style="font-size: 36px"
+            target="_self"
+            title="Contact Me!"
+          ></a>
+        </div>
+        <p>
+          Hello! I'm Michael, a game programming student building gameplay
+          systems with Unreal Engine and Unity. I design, prototype and ship
+          small gameplay prototypes, and I'm seeing a gameplay programming
+          internship for Spring 2026. Regardless of engine or genre, I really
+          enjoy making small-scale projects to learn how certain gameplay
+          systems work and implement them in creative ways. I am adaptable, a
+          team player and always excited to try something new!
         </p>
-      </div>
-      <div id="navbar">
-        <a
-          href="https://www.linkedin.com/in/michael-obadia02um/"
-          class="fa fa-linkedin-square"
-          style="font-size: 36px"
-          target="_blank"
-          title="LinkedIn"
-        ></a>
-        <a
-          href="MichaelObadiaCV.pdf"
-          class="fa-regular fa-file"
-          style="font-size: 36px"
-          target="_blank"
-          title="My CV"
-        ></a>
-        <a
-          href="https://romisalemon.itch.io"
-          class="fa-brands fa-itch-io"
-          style="font-size: 36px"
-          target="_blank"
-          title="Itch.io"
-        ></a>
-        <a
-          href="https://github.com/RomIsALemon"
-          class="fa-brands fa-github"
-          style="font-size: 36px"
-          target="_blank"
-          title="Github"
-        ></a>
       </div>
       <div class="expDiv">
         <h1>My Projects</h1>
@@ -100,13 +112,15 @@
           />
           <h4>Colour Mask</h4>
           <p class="shortDesc">
-            My submission in the Unity 2026 Global Game Jam.
-            An isometric puzzle game where you must place colour blocks complementary to the colours of the masked enemies.
+            My submission in the Unity 2026 Global Game Jam. An isometric puzzle
+            game where you must place colour blocks complementary to the colours
+            of the masked enemies.
           </p>
         </div>
       </div>
       <div class="expDiv">
         <h1>Technical Experience</h1>
+      </div>
         <div id="legend">
           <p style="color: cyan">Coding</p>
           <p style="color: orange">Engine</p>
@@ -131,9 +145,9 @@
             <li class="expItem" id="expOther">Aseprite</li>
           </ul>
         </div>
-      </div>
       <div class="expDiv">
         <h1>Education</h1>
+      </div>
         <div id="eduDiv">
           <div class="education">
             <h2>College Lasalle</h2>
@@ -146,7 +160,20 @@
             <p>2019-2023</p>
           </div>
         </div>
+        <div class="expDiv" id="contactme">
+        <h1>Contact Me!</h1>
       </div>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="5b336655-0aab-4a1d-b234-339dba971865"
+        />
+        <input type="text" name="name" required placeholder="Enter Your Name"/>
+        <input type="email" name="email" required placeholder="Enter Your Email Address"/>
+        <textarea name="message" required placeholder="Enter Your Message Here"></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
     <div id="screensaver">
       <img src="LemonGif.gif" id="screensaverImg" />

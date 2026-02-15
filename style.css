@@ -7,6 +7,10 @@ body {
   overflow: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -20,9 +24,9 @@ body {
 }
 
 .sliding-bg {
-  position: absolute;
+  position: fixed;
   background: url("backgroundthing3.gif") repeat;
-  height: 200%;
+  height: 100%;
   width: 1000%;
   animation: slide 60s linear infinite;
   z-index: -1;
@@ -153,16 +157,19 @@ ul {
 #expCode {
   border-color: cyan;
   color: cyan;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 #expEngine {
   border-color: orange;
   color: orange;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 #expOther {
   border-color: greenyellow;
   color: greenyellow;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 #screensaver {
@@ -210,7 +217,7 @@ a:hover {
 
 #navbar {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   justify-content: center;
 }
 
@@ -307,4 +314,55 @@ code {
   width:95%;
   white-space: pre-wrap;
   margin:auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin:auto;
+}
+
+form button {
+  background-color: rgba(0, 0, 0, 0.4);
+  width:40%;
+  margin:auto;
+  color:white;
+  font-weight:bold;
+  padding:10px;
+  font-size:20px;
+  border:2px solid white;
+  border-radius: 10px;
+  transition: background-color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+  margin-bottom:10px;
+}
+
+form button:hover {
+  background-color: lime;
+  color:black;
+}
+
+form button:focus {
+  background-color:rgb(29, 148, 29);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input, textarea {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding:10px;
+  font-size:15px;
+  color:white;
+  border:1px solid white;
+  border-radius: 5px;
+  margin:5px;
+}
+
+textarea {
+  height: 200px;
 }
