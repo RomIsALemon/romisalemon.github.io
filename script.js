@@ -2,13 +2,16 @@ let ssTimer;
 const screensaver = document.getElementById("screensaver");
 const initTitle = document.title
 
-document.querySelector('a[href="#contactme"]').addEventListener("click", function(e) {
+const contact_links = document.querySelectorAll('a[href="#contactme"]');
+contact_links.forEach(item => {
+    item.addEventListener("click", function(e) {
   e.preventDefault();
   document.querySelector("#contactme").scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
 });
+})
 
 document.addEventListener("mousemove", function(e) {
     setTimer();
