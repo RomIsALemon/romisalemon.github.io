@@ -1,6 +1,9 @@
 let ssTimer;
 const screensaver = document.getElementById("screensaver");
 const initTitle = document.title
+const langToggle = document.getElementById("language");
+const enElements = document.querySelectorAll("[lang=en]");
+const frElements = document.querySelectorAll("[lang=fr]");
 
 const contact_links = document.querySelectorAll('a[href="#contactme"]');
 contact_links.forEach(item => {
@@ -20,6 +23,58 @@ document.addEventListener("mousemove", function(e) {
 document.addEventListener("keypress", function(e) {
     setTimer()
 });
+
+langToggle.addEventListener("change", function(e) {
+    const selected = e.target.value;
+    console.log(selected);
+    if(selected == "english") {
+        toggleEnglish();
+    }
+    else if(selected == "french") {
+        toggleFrench();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lang = localStorage.getItem("language");
+
+    if (lang !== null) {
+        console.log(lang);
+
+        if (lang === "english") {
+            langToggle.value = "english";
+            toggleEnglish();
+        } 
+        else if (lang === "french") {
+            langToggle.value = "french";
+            toggleFrench();
+        }
+    }
+});
+
+function toggleEnglish() {
+    localStorage.setItem("language", "english");
+
+    frElements.forEach(elem => {
+        elem.style.display = "none";
+    });
+
+    enElements.forEach(elem => {
+        elem.style.display = "block";
+    });
+}
+
+function toggleFrench() {
+    localStorage.setItem("language", "french");
+
+    enElements.forEach(elem => {
+        elem.style.display = "none";
+    });
+
+    frElements.forEach(elem => {
+        elem.style.display = "block";
+    });
+}
 
 function setTimer() {
     document.title = initTitle;

@@ -366,3 +366,23 @@ input, textarea {
 textarea {
   height: 200px;
 }
+
+[lang="fr"] {
+  display:none;
+}
+
+#language, option {
+  margin:10px;
+  background:black;
+  color:lime;
+  text-align:center;
+  position:fixed;
+  font-size:20px;
+  font-family:"Pixelify Sans", sans-serif;
+  border:2px solid white;
+  border-radius: 10px;
+}
+
+::selection {
+  background:rgba(50, 205, 50, 0.516);
+}

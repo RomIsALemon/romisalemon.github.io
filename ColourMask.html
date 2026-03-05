@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +17,18 @@
 <body>
     <div class="container">
       <div class="sliding-bg"></div>
+      <select id="language">
+        <option value="english">EN</option>
+        <option value="french">FR</option>
+      </select>
       <div id="navbar">
         <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
       </div>
       <div class="project">
         <img src="colormaskscreenshot.png" id="savestatelogo">
         <div id="tools">
-        <h3>Tools Used:</h3>
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
         <ul>
             <li class="expItem" id="expEngine">Unity</li>
             <li class="expItem" id="expCode">C#</li>
@@ -31,21 +36,36 @@
         </div>
         <div id="projectinfo">
             <ul id="infolist">
-                <li class="projinfo"><b>Role</b>: Gameplay Programmer</li>
-                <li class="projinfo"><b>Team Size</b>: 7</li>
-                <li class="projinfo"><b>Development Time</b>: 48 Hours</li>
+                <li class="projinfo" lang="en"><b>Role</b>: Gameplay Programmer</li>
+                <li class="projinfo" lang="fr"><b>Rôle</b>: Programmeur de Gameplay</li>
+                <li class="projinfo" lang="en"><b>Team Size</b>: 7</li>
+                <li class="projinfo" lang="fr"><b>Taille D'Équipe</b>: 7</li>
+                <li class="projinfo" lang="en"><b>Development Time</b>: 48 Hours</li>
+                <li class="projinfo" lang="fr"><b>Temps De Développement</b>: 48 Heures</li>
             </ul>
         </div>
-        <p>This game was developed in 48 hours during the Unity 2026 Global Game Jam in Montreal with the theme being "Mask". I was responsible for programming the main gameplay mechanic:
+        <p lang="en">This game was developed in 48 hours during the Unity 2026 Global Game Jam in Montreal with the theme being "Mask". I was responsible for programming the main gameplay mechanic:
             placing down blocks that enemies will collide with, mixing their respective colours, thus tying into our interpretation of the theme, being colour masking.
         </p>
-        <h1>Block Placement</h1>
-        <p>Programming the logic for placing the colored blocks in the world is broken down into two main parts: Dragging the 2D block object from the UI to the world, 
+        <p lang="fr">Ce jeu a été développé en 48 heures lors du Unity 2026 Global Game Jam à Montréal, sur le thème «Masque». J'étais chargé de programmer le mécanisme 
+          principal du jeu: placer des blocs avec lesquels les ennemis entreront en collision, mélanger leurs couleurs respectives, ce qui correspondait à notre interprétation 
+          du thème, à savoir le masquage des couleurs.</p>
+        <h1 lang="en">Block Placement</h1>
+        <h1 lang="fr">Placement Des Blocks</h1>
+        <p lang="en">Programming the logic for placing the colored blocks in the world is broken down into two main parts: Dragging the 2D block object from the UI to the world, 
           and snapping the 3D block object to a plane before it becomes active. 
         </p>
+        <p lang="fr">
+          La programmation de la logique permettant de placer les blocs colorés dans le monde se divise en deux parties principales : faire glisser l'objet bloc 2D depuis 
+          l'interface utilisateur vers le monde, et aligner l'objet bloc 3D sur un plan avant qu'il ne devienne actif. 
+        </p>
         <br>
-        <p>Once a block on the UI has been selected, an instance of its 3D equivalent is created, and 
+        <p lang="en">Once a block on the UI has been selected, an instance of its 3D equivalent is created, and 
           spawned on a plane. Its spawn location is determined by a raycast from the player's mouse placement to a plane where the blocks and enemies are located.</p>
+        <p lang="fr">
+          Une fois qu'un bloc a été sélectionné dans l'interface utilisateur, une instance de son équivalent 3D est créée et générée sur un plan. 
+          Son emplacement de génération est déterminé par un raycast entre la position de la souris du joueur et un plan où se trouvent les blocs et les ennemis.
+        </p>
         <div id="codeblock"><code>public Vector3 BlockCoords()
 {
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -63,8 +83,10 @@
     }
 }</code>
 </div>
-        <h1>Colour Mixing System</h1>
-        <p>Enemies have variables for RGB values. When an enemy hits a block, their respective colors get merged, and when their color reaches RGB(255,255,255), it gets destroyed.</p>
+        <h1 lang="en">Colour Mixing System</h1>
+        <h1 lang="fr">Mélanger Les Couleurs</h1>
+        <p lang="en">Enemies have variables for RGB values. When an enemy hits a block, their respective colors get merged, and when their color reaches RGB(255,255,255), it gets destroyed.</p>
+        <p lang="fr">Les ennemis ont des variables pour les valeurs RVB. Lorsqu'un ennemi heurte un bloc, leurs couleurs respectives fusionnent, et lorsque leur couleur atteint RVB(255,255,255), il est détruit.</p>
         <div id="codeblock"><code>public void MergeColor(Color newColor)
 {
     // XOR-like merge for each channel
@@ -78,37 +100,61 @@
     SetColor(currentColor);
 }</code></div>
         <br>
-        <h1>What I Learned</h1>
-        <p>
+        <h1 lang="en">What I Learned</h1>
+        <h1 lang="fr">Ce Que J'ai Appris</h1>
+        <p lang="en">
         This game jam helped me develop practical skills that are directly applicable to game programming 
         and programming-adjacent roles such as QA and test automation. Working within a 48-hour deadline 
         forced me to write gameplay systems that were clear, predictable, and easy to debug, rather than 
         overly complex.
         </p>
+        <p lang="fr">
+        Ce game jam m'a aidé à développer des compétences pratiques directement applicables à la programmation de jeux 
+        et à des rôles connexes tels que l'assurance qualité et l'automatisation des tests. Le fait de travailler dans un délai de 48 heures 
+        m'a obligé à écrire des systèmes de gameplay clairs, prévisibles et faciles à déboguer, plutôt que 
+        trop complexes.
+        </p>
         <br>
-        <p>
+        <p lang="en">
         Implementing the block placement system gave me experience translating user input from UI space 
         into reliable world-space interactions using raycasting and collision logic. I focused on making 
         this system deterministic and consistent, which made it easier to test and adjust during rapid 
         iteration.
         </p>
+        <p lang="fr">
+        L'implémentation du système de placement de blocs m'a permis d'acquérir de l'expérience dans la conversion des entrées utilisateur de l'espace UI 
+        en interactions fiables dans l'espace mondial à l'aide du raycasting et de la logique de collision. Je me suis concentré sur la 
+        déterminisme et la cohérence de ce système, ce qui a facilité les tests et les ajustements pendant les itérations rapides.
+        </p>
         <br>
-        <p>
+        <p lang="en">
         The colour mixing mechanic reinforced the importance of data-driven design and edge case handling. 
         By representing enemy states through RGB values and clamping results, I ensured consistent behaviour 
         even in unexpected scenarios. This approach made the system easier to validate, balance, and reason 
         about during playtesting.
         </p>
+        <p lang="fr">
+        Le système de mélange des couleurs a renforcé l'importance de la conception basée sur les données 
+        et du traitement des cas limites. En représentant les états des ennemis à l'aide de valeurs RVB et 
+        en limitant les résultats, j'ai garanti un comportement cohérent, même dans des scénarios imprévus. 
+        Cette approche a facilité la validation, l'équilibrage et l'analyse du système pendant les tests de jeu.
+        </p>
         <br>
-        <p>
+        <p lang="en">
         Finally, collaborating in a multidisciplinary team strengthened my communication and adaptability. 
         I regularly adjusted my code based on feedback from designers and artists, and learned how to 
         prioritize stability and clarity under tight deadlines, which that are essential for internship 
         roles focused on gameplay programming, QA, and autotesting.
         </p>
-
+        <p lang="fr">
+        Enfin, le fait de collaborer au sein d'une équipe multidisciplinaire a renforcé mes capacités de communication et d'adaptation. 
+        J'ai régulièrement ajusté mon code en fonction des commentaires des concepteurs et des artistes, et j'ai appris à 
+        privilégier la stabilité et la clarté dans des délais serrés, ce qui est essentiel pour les stages 
+        axés sur la programmation de jeux, l'assurance qualité et les tests automatiques.
+        </p>
         <img id="trpg" class="projectimg" src="colormaskpreview.gif">
-        <p><a href="https://globalgamejam.org/games/2026/color-mask-5">You can try the game out for yourself here!</a></p>
+        <p lang="en"><a href="https://globalgamejam.org/games/2026/color-mask-5">You can try the game out for yourself here!</a></p>
+        <p lang="fr"><a href="https://globalgamejam.org/games/2026/color-mask-5">Vous pouvez essayer le jeu par vous-même ici!</a></p>
       </div>
     <div id="screensaver">
       <img src="LemonGif.gif" id="screensaverImg" />

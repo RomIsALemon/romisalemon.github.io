@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,52 +17,72 @@
 <body>
     <div class="container">
       <div class="sliding-bg"></div>
+      <select id="language">
+        <option value="english">EN</option>
+        <option value="french">FR</option>
+      </select>
       <div id="navbar">
         <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
       </div>
       <div class="expDiv">
-        <h1>Works In Progress</h1>
+        <h1 lang="en">Works In Progress</h1>
+        <h1 lang="fr">Projets En Cours</h1>
       </div>
       <div class="project">
-          <h1>Tactical RPG Project</h1>
+        <h1 lang="en">Tactical RPG Project</h1>
+        <h1 lang="fr">Projet de RPG Tactique</h1>
         <img id="trpg" class="projectimg" src="TRPGpic.png">
-        <h3>Tools Used:</h3>
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
         <ul>
             <li class="expItem" id="expEngine">Unreal</li>
             <li class="expItem" id="expCode">Blueprint Scripting</li>
             <li class="expItem" id="expOther">Aseprite</li>
         </ul>
-        <p>This is a grid-based Tactical RPG with HD2D Graphics, inspired by Fire Emblem. 
+        <p lang="en">This is a grid-based Tactical RPG with HD2D Graphics, inspired by Fire Emblem. 
             While this will take quite a long time, I've already learned a lot from working on this regarding camera movement, grid/tile systems and pathfinding. 
             This is by far my most complicated project yet, 
             but I'm looking forward to how everything will come together in the final product!</p>
+        <p lang="fr">Ce projet est un RPG tactique basé sur une grille avec des graphismes HD2D, inspiré par Fire Emblem. 
+            Même si cela prendra beaucoup de temps, j'ai déjà beaucoup appris en travaillant sur ce projet en ce qui concerne les mouvements de caméra, les systèmes de grille et la recherche de chemin. 
+            C'est de loin mon projet le plus compliqué à ce jour, 
+            mais j'ai hâte de voir le résultat final!</p>
       </div>
       <div class="project">
-          <h1>Point and Click Detective Project</h1>
-        <img id="trpg" class="projectimg" src="PaCpic.png">
-        <h3>Tools Used:</h3>
+          <h1>Endless Runner Project</h1>
+        <img id="trpg" class="projectimg" src="endlessrunner.png">
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
         <ul>
-            <li class="expItem" id="expEngine">Unreal</li>
-            <li class="expItem" id="expCode">Blueprint Scripting</li>
-            <li class="expItem" id="expCode">C++</li>
+            <li class="expItem" id="expEngine">Unity</li>
+            <li class="expItem" id="expCode">C#</li>
         </ul>
-        <p>Our team project is a point and click detective game where you play as the murderer as you investigate the crime scene and attempt to cover your tracks. I ended up using some of what I learned from the tactical RPG project to make a working point and click camera system.
-            I'm super excited for this one, as we will be able to focus a lot on setting a dark and tense atmosphere as you try and get away with it in time...
+        <p lang="en">
+          I am currently working on an endless runner for PC and mobile, and I'm already learning quite a lot regarding procedural level generation,
+          object pooling and mobile input systems.
+        </p>
+        <p lang="fr">
+          Je travaille actuellement sur un jeu de course infinie pour PC et mobile, et j'apprends déjà beaucoup sur la génération procédurale de niveaux,
+          le pooling d'objets et les systèmes d'entrée mobiles.
         </p>
       </div>
       <div class="project">
           <h1>Always a Smaller Fish</h1>
         <img id="trpg" class="projectimg" src="FishEatGameGif2.gif">
-        <h3>Tools Used:</h3>
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
         <ul>
             <li class="expItem" id="expEngine">Godot</li>
             <li class="expItem" id="expCode">GDScript</li>
             <li class="expItem" id="expOther">Aseprite</li>
         </ul>
-        <p>My solo project, a 2D growth-based Metroidvania game where size matters. Whether you decide to eat smaller fish to
+        <p lang="en">My solo project, a 2D growth-based Metroidvania game where size matters. Whether you decide to eat smaller fish to
           become big and strong, or stay small to fit into tight crevices and find secrets, there is more than one way to traverse this ocean.
           <a href="https://github.com/RomIsALemon/FishEatGame/tree/main">You can follow my progress here!</a>
         </p>
+        <p lang="fr">Mon projet solo, un jeu Metroidvania en 2D où la taille compte. Que vous décidiez de manger des poissons plus petits pour
+          devenir grand et fort, ou de rester petit pour vous faufiler dans des crevasses étroites et trouver des secrets, il y a plus d'une façon de traverser cet océan.
+        <a href="https://github.com/RomIsALemon/FishEatGame/tree/main">Vous pouvez suivre mes progrès ici!</a></p>
       </div>
     <div id="screensaver">
       <img src="LemonGif.gif" id="screensaverImg" />

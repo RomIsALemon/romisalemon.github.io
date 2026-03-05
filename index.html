@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +20,13 @@
   <body>
     <div class="container">
       <div class="sliding-bg"></div>
+      <select id="language">
+        <option value="english">EN</option>
+        <option value="french">FR</option>
+      </select>
       <h1 class="headertext">Michael Obadia</h1>
-      <h2 class="headertext">Game Developer and Programmer</h2>
+      <h2 class="headertext" lang="en">Game Developer and Programmer</h2>
+      <h2 class="headertext" lang="fr">Developpeur et Programateur de Jeux Vidéo</h2>
       <div id="mainDesc">
         <img id="avatar" src="PortfolioAvatar2.png" />
         <div id="navbar">
@@ -61,7 +66,7 @@
             title="Contact Me!"
           ></a>
         </div>
-        <p>
+        <p lang="en">
           Hello! I'm Michael, a game programming student building gameplay
           systems with Unreal Engine and Unity. I design, prototype and ship
           small gameplay prototypes. Regardless of engine or genre, I really
@@ -72,9 +77,22 @@
           <br>
           I am currently seeking a <b>Gameplay Programming Internship</b> for Spring 2026. <a href="#contactme">Contact me</a> for any inquiries!
         </p>
+        <p lang="fr">
+          Salut! Je m'appelle Michael, je suis finissant en programmation de jeux vidéo 
+          et je développe des systèmes de gameplay avec Unreal Engine et Unity. 
+          Je conçois, prototypise et publie des prototypes de jeux.
+          Quel que soit le moteur ou le genre, ma passion est de réaliser des projets 
+          à petite échelle pour comprendre le fonctionnement de certains systèmes 
+          de gameplay et les implémenter de manière créative.
+          Je sais m'adapter, j'ai l'esprit d'équipe et je suis toujours enthousiaste à l'idée d'embarquer de nouveaux projets!
+          <br>
+          <br>
+          Je recherche un <b>Stage en Programmation de Jeux Vidéo</b> pour le printemps 2026. <a href="#contactme">N'hésitez pas à me contacter</a> pour toute question!
+        </p>
       </div>
       <div class="expDiv">
-        <h1>My Projects</h1>
+        <h1 lang="en">My Projects</h1>
+        <h1 lang="fr">Mes Projets</h1>
       </div>
       <div id="gameDiv">
         <div class="game" onclick="sendtopage('ComingSoon')">
@@ -84,9 +102,13 @@
             height="250px"
             class="gameImg"
           />
-          <h4>In Progress Projects</h4>
-          <p class="shortDesc">
+          <h4 lang="en">In Progress Projects</h4>
+          <h4 lang="fr">Projets En Cours</h4>
+          <p class="shortDesc" lang="en">
             Here are some projects I am currently working on!
+          </p>
+          <p class="shortDesc" lang="fr">
+            Voici quelques projets en cours sur lesquels je travaille!
           </p>
         </div>
         <div class="game" onclick="sendtopage('SaveState')">
@@ -98,9 +120,13 @@
             class="gameImg"
           />
           <h4>Save_State()</h4>
-          <p class="shortDesc">
+          <p class="shortDesc" lang="en">
             My first project in Unreal Engine. A first person puzzle platformer
             where you can save and load your position at will.
+          </p>
+          <p class="shortDesc" lang="fr">
+            Mon premier project dans Unreal Engine. Un jeu de platforme et de puzzle où
+            vous pouvez sauvegarder et charger votre position à volonté.
           </p>
         </div>
 
@@ -113,20 +139,28 @@
             class="gameImg"
           />
           <h4>Colour Mask</h4>
-          <p class="shortDesc">
-            My submission in the Unity 2026 Global Game Jam. An isometric puzzle
-            game where you must place colour blocks complementary to the colours
-            of the masked enemies.
+          <p class="shortDesc" lang="en">
+            My submission in the Unity 2026 Global Game Jam. An isometric puzzle 
+            game where you must place colour blocks complementary to the colours of the masked enemies.
+          </p>
+          <p class="shortDesc" lang="fr">
+            Ma participation au Unity 2026 Global Game Jam. Un jeu de puzzle 
+            isométrique dans lequel vous devez placer des blocs de couleur 
+            complémentaires aux couleurs des ennemis masqués.
           </p>
         </div>
       </div>
       <div class="expDiv">
-        <h1>Technical Experience</h1>
+        <h1 lang="en">Technical Experience</h1>
+        <h1 lang="fr">Expérience Technique</h1>
       </div>
         <div id="legend">
-          <p style="color: cyan">Coding</p>
-          <p style="color: orange">Engine</p>
-          <p style="color: greenyellow">Other</p>
+          <p style="color: cyan" lang="en">Coding</p>
+          <p style="color: cyan" lang="fr">Code</p>
+          <p style="color: orange" lang="en">Engine</p>
+          <p style="color: orange" lang="fr">Moteur</p>
+          <p style="color: greenyellow" lang="en">Other</p>
+          <p style="color: greenyellow" lang="fr">Autre</p>
         </div>
         <div id="exp">
           <ul>
@@ -148,13 +182,15 @@
           </ul>
         </div>
       <div class="expDiv">
-        <h1>Education</h1>
+        <h1 lang="en">Education</h1>
+        <h1 lang="fr">Éducation</h1>
       </div>
         <div id="eduDiv">
           <div class="education">
             <h2>College Lasalle</h2>
             <p>DEC - Computer Science Technology - Video Game Programming</p>
-            <p>2023-Ongoing</p>
+            <p lang="en">2023-Ongoing</p>
+            <p lang="fr">2023-En Cours</p>
           </div>
           <div class="education">
             <h2>Dawson College</h2>
@@ -163,7 +199,8 @@
           </div>
         </div>
         <div class="expDiv" id="contactme">
-        <h1>Contact Me!</h1>
+        <h1 lang="en">Contact Me!</h1>
+        <h1 lang="fr">Contactez-Moi!</h1>
       </div>
       <form action="https://api.web3forms.com/submit" method="POST">
         <input
@@ -171,10 +208,11 @@
           name="access_key"
           value="5b336655-0aab-4a1d-b234-339dba971865"
         />
-        <input type="text" name="name" required placeholder="Enter Your Name"/>
+        <input type="text" name="name" required placeholder="Enter Your Name / Company Name"/>
         <input type="email" name="email" required placeholder="Enter Your Email Address"/>
         <textarea name="message" required placeholder="Enter Your Message Here"></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit" lang="en">Submit</button>
+        <button type="submit" lang="fr">Soumettre</button>
       </form>
     </div>
     <div id="screensaver">

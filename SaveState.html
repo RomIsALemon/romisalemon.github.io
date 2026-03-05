@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +17,18 @@
 <body>
     <div class="container">
       <div class="sliding-bg"></div>
+      <select id="language">
+        <option value="english">EN</option>
+        <option value="french">FR</option>
+      </select>
       <div id="navbar">
         <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
       </div>
       <div class="project">
         <img src="SaveStateLogo.png" id="savestatelogo">
         <div id="tools">
-        <h3>Tools Used:</h3>
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
         <ul>
             <li class="expItem" id="expEngine">Unreal</li>
             <li class="expItem" id="expCode">Blueprint Scripting</li>
@@ -32,30 +37,46 @@
         </div>
         <div id="projectinfo">
             <ul id="infolist">
-                <li class="projinfo"><b>Role</b>: Gameplay Programmer</li>
-                <li class="projinfo"><b>Team Size</b>: 1</li>
-                <li class="projinfo"><b>Development Time</b>: 4 Months</li>
+                <li class="projinfo" lang="en"><b>Role</b>: Gameplay Programmer</li>
+                <li class="projinfo" lang="fr"><b>Rôle</b>: Programmeur de Gameplay</li>
+                <li class="projinfo" lang="en"><b>Team Size</b>: 1</li>
+                <li class="projinfo" lang="fr"><b>Taille D'Équipe</b>: 1</li>
+                <li class="projinfo" lang="en"><b>Development Time</b>: 4 Months</li>
+                <li class="projinfo" lang="fr"><b>Temps De Développement</b>: 4 Mois</li>
             </ul>
         </div>
-        <p>This was my first complete project in Unreal Engine 5, made for my Game Engine II term project. My idea was simple, but the potential was exciting: A Portal-inspired puzzle platformer,
+        <p lang="en">This was my first complete project in Unreal Engine 5, made for my Game Engine II term project. My idea was simple, but the potential was exciting: A Portal-inspired puzzle platformer,
             but instead of shooting portals, you save your position at any time, and load it, in the same way an emulator uses save states.
         </p>
-        <h1>The Save State Mechanic</h1>
-        <p>When the player presses R, the character's current position, rotation and velocity are saved into the GameMode blueprint, which are then set back to
+        <p lang=fr>C'était mon premier projet complet dans Unreal Engine 5, réalisé dans le cadre de mon projet de fin d'études en Game Engine II. 
+            Mon idée était simple, mais le potentiel était excitant : un jeu de plateforme et de puzzle inspiré par Portal, 
+            mais au lieu de tirer des portails, vous enregistrez votre position à n'importe quel moment et la rechargez, de la même manière qu'un émulateur utilise les sauvegardes d'états.</p>
+        <h1 lang="en">The Save State Mechanic</h1>
+        <h1 lang="fr">Sauvegardement et Chargement</h1>
+        <p lang="en">When the player presses R, the character's current position, rotation and velocity are saved into the GameMode blueprint, which are then set back to
             the player pawn when the player presses F. This function is useful for going back to a previous spot in case you fall off a ledge, as well as
             reaching an area you wouldn't be able to get to quick enough by moving normally.
         </p>
+        <p lang="fr">Lorsque le joueur appuie sur R, la position, la rotation et la vitesse actuelles du personnage sont enregistrées dans le blueprint GameMode, 
+            puis réattribuées au Pawn du joueur lorsque il appuie sur F. Cette fonction est utile pour revenir à un endroit précédent si vous tombez d'un rebord, 
+            ainsi que pour atteindre une zone que vous ne pourriez pas atteindre assez rapidement en vous déplaçant normalement.</p>
         <img id="trpg" class="projectimg" src="SaveStateGif3.gif">
-        <p>In addition, an interesting effect this feature has comes from its velocity storage. Once the velocity is loaded and set to the player pawn, it will
+        <p lang="en">In addition, an interesting effect this feature has comes from its velocity storage. Once the velocity is loaded and set to the player pawn, it will
             be as if they had just saved, and their movement continues as normal. However, if the player saves while completely still and loads their state while they have
             momentum...
         </p>
+        <p lang="fr">De plus, cette fonctionnalité a un effet intéressant lié à la sauvegarde de la vitesse. Une fois que la vitesse est chargée et définie pour le pion du joueur, 
+            c'est comme s'il venait de sauvegarder, et ses mouvements se poursuivent normalement. Cependant, si le joueur sauvegarde alors qu'il est complètement immobile 
+            et charge son état alors qu'il a de l'élan...</p>
         <img id="trpg" class="projectimg" src="SaveStateGif4.gif">
-        <p>The momentum from before you loaded the state gets used instead! Although unintended, this bug was turned into a feature! 
+        <p lang="en">The momentum from before you loaded the state gets used instead! Although unintended, this bug was turned into a feature! 
             When taking these uses of save states into account, their applications in puzzles opened up a lot more.</p>
+        <p lang="fr">C'est plutôt l'élan pris avant le chargement de l'état qui est utilisé! Bien que non intentionnel, ce bug a été transformé en fonctionnalité! 
+            En tenant compte de ces utilisations des états de sauvegarde, leurs applications dans les puzzles se sont considérablement élargies.</p>
         <img id="trpg" class="projectimg" src="SaveStateGif1.gif">
-        <p>2 levels were created, each having 5 rooms with puzzles to solve. <a href="https://romisalemon.itch.io/save_state">You can try them out for yourself here!</a></p>
-      </div>
+        <p lang="en">2 levels were created, each having 5 rooms with puzzles to solve. <a href="https://romisalemon.itch.io/save_state">You can try them out for yourself here!</a></p>
+        <p lang="fr">2 niveaux ont été créés, chacun comportant cinq salles avec des puzzles à résoudre. <a href="https://romisalemon.itch.io/save_state">Vous pouvez les essayer vous-même ici!</a></p>
+    </div>
     <div id="screensaver">
       <img src="LemonGif.gif" id="screensaverImg" />
     </div>
