@@ -105,5 +105,8 @@ function sendtopage(name) {
         case "ColourMask":
             window.open("ColourMask.html", "_self")
             break;
+        case "Dion":
+            window.open("Dion.html", "_self")
+            break;
     }
 }

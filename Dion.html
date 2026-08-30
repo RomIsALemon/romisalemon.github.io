@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DION</title>
+    <link rel="icon" type="image/x-icon" href="LemonLogo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+      <div class="sliding-bg"></div>
+      <select id="language">
+        <option value="english">EN</option>
+        <option value="french">FR</option>
+      </select>
+      <div id="navbar">
+        <a href="index.html" class="fa-solid fa-house" style="font-size:36px" target="_self" title="Home"></a>
+      </div>
+      <div class="project">
+        <img src="Logo-Dion.png" id="">
+        <div id="tools">
+        <h3 lang="en">Tools Used:</h3>
+        <h3 lang="fr">Outils Utilisés:</h3>
+        <ul>
+            <li class="expItem" id="expEngine">Unity</li>
+            <li class="expItem" id="expCode">C#</li>
+            <li class="expItem" id="expOther">Plastic SCM</li>
+            <li class="expItem" id="expOther">Agile</li>
+        </ul>
+        </div>
+        <div id="projectinfo">
+            <ul id="infolist">
+                <li class="projinfo" lang="en"><b>Role</b>: Game Programming Intern</li>
+                <li class="projinfo" lang="fr"><b>Rôle</b>: Stagiaire en Programmation de Jeux</li>
+                <li class="projinfo" lang="en"><b>Team Size</b>: 4</li>
+                <li class="projinfo" lang="fr"><b>Taille D'Équipe</b>: 4</li>
+                <li class="projinfo" lang="en"><b>Time Worked On</b>: 3 Months</li>
+                <li class="projinfo" lang="fr"><b>Durée de Mon Travail</b>: 3 Mois</li>
+            </ul>
+        </div>
+        <p lang="en">This game is currently in development by Baobab Games, who were looking for interns to help speed up development. 
+          As such, I worked alongside the lead developer and fellow interns from May 11th to August 19th. This experience has been invaluable for me as I have been able to 
+          learn a lot about game programming and development. This includes optimization, server/client side debugging and controller support, among other things.
+        </p>
+        <p lang="fr">Ce jeu est actuellement en cours de développement chez Baobab Games, qui recherchait des stagiaires pour aider à accélérer le développement. 
+          J'ai donc travaillé avec le développeur en chef et d'autres stagiaires du 11 mai au 19 août. Cette expérience a été très enrichissante pour moi, 
+          car elle m'a permis d'apprendre beaucoup sur la programmation et le développement de jeux vidéo. 
+          J'ai notamment pu me familiariser avec l'optimisation, le débogage côté serveur et côté client, 
+          et la compatibilité avec les manettes, entre autres.</p>
+        <h1 lang="en">Optimization</h1>
+        <h1 lang="fr">Optimisation</h1>
+        <p lang="en">Optimization was by far the most challenging part of development for me, as I hadn't been taught about it during my studies.
+          That being said, this was also what I learned about the most. As I got more used to using the Unity Profiler to diagnose, test and optimize, 
+          I broke down the things I learned into three types: Code Optimization, Vegetation Optimization and Terrain Optimization.
+        </p>
+        <p lang="fr">
+          L'optimisation a été de loin la partie la plus complexe du développement pour moi, car je n'avais pas reçu de formation à ce sujet pendant mes études. 
+          Cela dit, c'est aussi ce que j'ai le plus appris. Au fur et à mesure que je me familiarisais avec l'utilisation du Profiler de Unity pour diagnostiquer, 
+          tester et optimiser, j'ai classé ce que j'avais appris en trois catégories : 
+          l'optimisation du code, l'optimisation de la végétation et l'optimisation du terrain.
+        </p>
+        <br>
+        <p lang="en">Code Optimization had me become more familiar with C#'s event system, as opposed to using the Update function to avoid calls every frame 
+          when not necessary, as well as making sure Debug.Log calls weren't being called too much.
+        <br>
+        <br>Vegetation Optimization taught me about LOD grouping and baking the world's vegetation in order to reduce draw calls, which helped a lot
+       when trying to reduce the game's framedrops.
+      <br>
+      <br> As Unity's terrain system is quite resource intensive, Terrain Optimization was very important for me to learn. Fine tuning terrain settings
+     like Pixel Error and Detail Distance helped to reduce draw calls while still retaining the look of the game.</p>
+        <p lang="fr">
+          L'optimisation du code m'a permis de mieux maîtriser le système d'événements de C#, plutôt que d'utiliser la fonction 
+          Update pour éviter les appels à chaque image lorsque cela n'était pas nécessaire, tout en veillant à ce que les appels à Debug.Log 
+          ne soient pas trop fréquents.
+        <br>
+        <br>
+          L'optimisation de la végétation m'a permis de découvrir le regroupement par LOD et le « baking » de la végétation du monde 
+          afin de réduire le nombre d'appels de rendu, ce qui m'a beaucoup aidé à limiter les baisses de framerate du jeu.
+        <br>
+        <br>
+          Le système de terrain de Unity utilisant beaucoup de ressources, l'optimisation du terrain était pour moi un sujet essentiel à maîtriser. 
+          Le réglage précis des paramètres du terrain, tels que l'erreur de pixel et la distance de détail, m'a permis de réduire le nombre d'appels 
+          de rendu tout en conservant l'aspect visuel du jeu.
+        </p>
+        
+        <h1 lang="en">Online Multiplayer</h1>
+        <h1 lang="fr">Multijoueur En-Ligne</h1>
+        <p lang="en">This project was my first experience developing an online multiplayer game and working at this scale. 
+          I gained valuable experience understanding the networking system, debugging server-client desyncs, 
+          and investigating issues that occurred when multiple players interacted with the same objects.
+            <br>
+            <br>
+            One issue involved an interactable structure that entered a cooldown period after activation. 
+            An object was supposed to disappear during the cooldown, but only the activating player could see it disappear. 
+            Other players could still see the object, despite being unable to interact with it.
+            <br>
+            <br>
+            I traced the issue through the player interaction, server, and client representations and discovered 
+            that the object's Renderer was being disabled locally rather than through a synchronized network state. 
+            Since Mirror does not automatically synchronize properties such as Renderer.enabled, the visual change was not reflected on other clients.
+            <br>
+            <br>
+            Resolving this issue taught me an important lesson about multiplayer development: 
+            an object's gameplay state and its visual representation must be treated as separate concerns. 
+            This experience strengthened my understanding of client-server architecture, network synchronization, 
+            and how gameplay changes must be consistently propagated across all connected clients.
+        </p>
+        <p lang="fr">Ce projet a été ma première expérience dans le développement d'un jeu multijoueur en ligne et dans le travail à cette échelle. 
+          J'ai acquis une expérience précieuse en apprenant à comprendre le système de mise en réseau, en déboguant les désynchronisations 
+          serveur-client et en analysant les problèmes qui survenaient lorsque plusieurs joueurs interagissaient avec les mêmes objets.
+          <br>
+          <br>
+          L'un des problèmes concernait une structure interactive qui entrait dans une période de recharge après son activation. 
+          Un objet était censé disparaître pendant cette période de recharge, mais seul le joueur qui l'avait activé pouvait le voir disparaître. 
+          Les autres joueurs pouvaient toujours voir l'objet, bien qu'ils ne puissent pas interagir avec lui.
+          <br>
+          <br>
+          J'ai remonté la piste du problème à travers les représentations au niveau du joueur, du serveur et du client, 
+          et j'ai découvert que le Renderer de l'objet était désactivé localement, et non via un état réseau synchronisé. 
+          Étant donné que Mirror ne synchronise pas automatiquement des propriétés telles que Renderer.enabled, 
+          le changement visuel n'était pas répercuté sur les autres clients.
+          <br>
+          <br>
+          La résolution de ce problème m'a appris une leçon importante concernant le développement multijoueur: 
+          l'état d'un objet dans le gameplay et sa représentation visuelle doivent être considérés comme deux aspects distincts. 
+          Cette expérience m'a permis de mieux comprendre l'architecture client-serveur, la synchronisation réseau et la manière dont les 
+          changements dans le gameplay doivent être propagés de manière cohérente à tous les clients connectés.
+        </p>
+        
+        <br>
+        <h1 lang="en">What I Learned</h1>
+        <h1 lang="fr">Ce Que J'ai Appris</h1>
+        <h3 lang="en">Technical Skills</h3>
+        <h3 lang="fr">Compétences Techniques</h3>
+        <ul>
+          <li class="expItem">Plastic SCM</li>
+          <li class="expItem">Mirror Networking</li>
+          <li class="expItem">Playfab</li>
+          <li class="expItem">Steam API</li>
+          <li class="expItem">Optimization/Profiling</li>
+        </ul>
+        <h3 lang="en">Soft Skills Strengthened</h3>
+        <h3 lang="fr">Compétences Relationnelles Renforcées</h3>
+        <ul>
+          <li class="expItem" lang="en">Problem Solving</li>
+          <li class="expItem" lang="fr">Résolution de Problèmes</li>
+          <li class="expItem">Communication</li>
+          <li class="expItem">Documentation</li>
+          <li class="expItem" lang="en">Troubleshooting/Testing</li>
+          <li class="expItem" lang="fr">Dépannage/Tests</li>
+          <li class="expItem" lang="en">Working with Agile/Scrum</li>
+          <li class="expItem" lang="fr">Travailler avec Agile/Scrum</li>
+        </ul>
+        <p lang="en"><a href="https://store.steampowered.com/app/3563860/DION/">Here is the game's Steam page!</a></p>
+        <p lang="fr"><a href="https://store.steampowered.com/app/3563860/DION/">Voici la page Steam du jeu!</a></p>
+      </div>
+    <div id="screensaver">
+      <img src="LemonGif.gif" id="screensaverImg" />
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1d10897a33.js" crossorigin="anonymous"></script>
+</body>
+</html>

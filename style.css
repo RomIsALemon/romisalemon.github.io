@@ -152,6 +152,12 @@ ul {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out, rotate 0.2s ease-in-out;
+}
+
+.expItem:hover {
+  transform: scale(1.1);
+  rotate:5deg;
 }
 
 #expCode {
@@ -169,6 +175,12 @@ ul {
 #expOther {
   border-color: greenyellow;
   color: greenyellow;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+#expDefault {
+  border-color: white;
+  color: white;
   background-color: rgba(0, 0, 0, 0.664);
 }
 
